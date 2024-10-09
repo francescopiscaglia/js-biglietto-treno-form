@@ -6,7 +6,7 @@ const passengerAgeEl = document.getElementById("passenger-age");
 const formEL = document.querySelector("form");
 
 // seleziono la card body dalla DOM
-const cardsEL = document.querySelector(".card-body");
+const cardsEL = document.querySelector(".col-7");
 
 const passengerNameEl = document.getElementById("passengerName");
 
@@ -56,43 +56,45 @@ formEL.addEventListener("submit", function (e) {
     let tripCodeNumber = Math.floor((Math.random() * 99999) + 1);
 
     const tripInfoEl = `
-        <h5 class="card-title mb-4">${passengerNameValue}</h5>
-        <hr>
-        <div class="row mb-4">
-            <div class="col-6">
-                <span class="fw-bold">Offerta</span>
+    <div class="card w-100" style="width: 18rem;">
+        <div class="card-body border border-warning-subtle border-1 rounded-2" style="background-color: #FFFBE9;">
+            <h5 class="card-title mb-4">${passengerNameValue}</h5>
+            <hr>
+            <div class="row mb-4">
+                <div class="col-6">
+                    <span class="fw-bold">Offerta</span>
+                </div>
+                <div class="col-6">
+                    <span>${typeOfOffer}</span>
+                </div>
             </div>
-            <div class="col-6">
-                <span>${typeOfOffer}</span>
+            <div class="row mb-4">
+                <div class="col-6">
+                    <span class="fw-bold">Carrozza</span>
+                </div>
+                <div class="col-6">
+                    <span>${carriageNumber}</span>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-6">
+                    <span class="fw-bold">Codice viaggio</span>
+                </div>
+                <div class="col-6">
+                    <span>${tripCodeNumber}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <span class="fw-bold">Prezzo biglietto</span>
+                </div>
+                <div class="col-6">
+                    <span>${ticketFinalPrice.toFixed(2)}€</span>
+                </div>
             </div>
         </div>
-        <div class="row mb-4">
-            <div class="col-6">
-                <span class="fw-bold">Carrozza</span>
-            </div>
-            <div class="col-6">
-                <span>${carriageNumber}</span>
-            </div>
-        </div>
-        <div class="row mb-4">
-            <div class="col-6">
-                <span class="fw-bold">Codice viaggio</span>
-            </div>
-            <div class="col-6">
-                <span>${tripCodeNumber}</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <span class="fw-bold">Prezzo biglietto</span>
-            </div>
-            <div class="col-6">
-                <span>${ticketFinalPrice.toFixed(2)}€</span>
-            </div>
-        </div>
+    </div>
     `;
 
     cardsEL.insertAdjacentHTML("beforeend", tripInfoEl);
-
-
 });

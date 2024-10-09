@@ -12,41 +12,38 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 
-<body>
+<body style="background-color: #FFFBE9;">
 
-    <div class="container mt-5">
+    <div class="container mt-5 py-3 border border-warning-subtle border-1 rounded-2" style="background-color: #E3CAA5;">
         <div class="row">
             <div class="col-5">
 
                 <form class="row g-3">
 
                     <!-- name -->
-                    <div class="col-md-">
+                    <div>
                         <label for="passengerName" class="form-label">Nome e cognome</label>
-                        <input type="text" class="form-control" id="passengerName">
+                        <input type="text" class="form-control" id="passengerName" style="background-color: #FFFBE9;">
                     </div>
 
                     <!-- km -->
                     <div class="col-md-6">
                         <label for="number-of-km" class="form-label">km da percorrere</label>
-                        <input type="text" class="form-control" id="number-of-km">
+                        <input type="text" class="form-control" id="number-of-km" style="background-color: #FFFBE9;">
                     </div>
 
                     <!-- age -->
                     <div class="col-md-6">
                         <label for="passenger-age" class="form-label">Età del passeggero</label>
-                        <input type="number" class="form-control" id="passenger-age">
+                        <input type="number" class="form-control" id="passenger-age" style="background-color: #FFFBE9;">
                     </div>
                     <div class="col-12">
-                        <button type="submit" id="submit" class="btn btn-primary">Genera</button>
+                        <button type="submit" id="submit" class="btn btn-success">Genera</button>
                     </div>
                 </form>
             </div>
 
             <div class="col-7">
-                <div class="card w-100" style="width: 18rem;">
-                    <div class="card-body"></div>
-                </div>
             </div>
         </div>
     </div>
