@@ -51,12 +51,16 @@ formEL.addEventListener("submit", function (e) {
         alert("Dati non validi")
     }
 
+    // generate a random number
+    let carriageNumber = Math.floor((Math.random() * 10) + 1);
+    let tripCodeNumber = Math.floor((Math.random() * 99999) + 1);
+
     const tripInfoEl = `
         <h5 class="card-title mb-4">${passengerNameValue}</h5>
         <hr>
         <div class="row mb-4">
             <div class="col-6">
-                <span>Offerta</span>
+                <span class="fw-bold">Offerta</span>
             </div>
             <div class="col-6">
                 <span>${typeOfOffer}</span>
@@ -64,26 +68,26 @@ formEL.addEventListener("submit", function (e) {
         </div>
         <div class="row mb-4">
             <div class="col-6">
-                <span>Carrozza</span>
+                <span class="fw-bold">Carrozza</span>
             </div>
             <div class="col-6">
-                <span>5</span>
+                <span>${carriageNumber}</span>
             </div>
         </div>
         <div class="row mb-4">
             <div class="col-6">
-                <span>Codice viaggio</span>
+                <span class="fw-bold">Codice viaggio</span>
             </div>
             <div class="col-6">
-                <span>93929</span>
+                <span>${tripCodeNumber}</span>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <span>Prezzo biglietto</span>
+                <span class="fw-bold">Prezzo biglietto</span>
             </div>
             <div class="col-6">
-                <span>${ticketFinalPrice}</span>
+                <span>${ticketFinalPrice.toFixed(2)}€</span>
             </div>
         </div>
     `;
