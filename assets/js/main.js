@@ -33,5 +33,5 @@ formEL.addEventListener("submit", function(e) {
         ticketFinalPrice = basePrice;
     }
 
-    console.log(ticketFinalPrice.toFixed(2));
+    console.log(`Il prezzo del biglietto è di ${ticketFinalPrice.toFixed(2)}€`);
 })
