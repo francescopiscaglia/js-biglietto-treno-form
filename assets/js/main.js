@@ -1,6 +1,7 @@
 // seleziono il valore dell'input
 const numberOfKmEl = document.getElementById("number-of-km");
 const passengerAgeEl = document.getElementById("passenger-age");
+const passengerNameEl = document.getElementById("passengerName");
 
 // seleziono l'input submit dalla DOM
 const formEL = document.querySelector("form");
@@ -8,7 +9,9 @@ const formEL = document.querySelector("form");
 // seleziono la card body dalla DOM
 const cardsEL = document.querySelector(".col-7");
 
-const passengerNameEl = document.getElementById("passengerName");
+// seleziono le classi colonne da modificare
+const colEl = document.querySelector(".col-12");
+console.log(colEl);
 
 // event listener
 formEL.addEventListener("submit", function (e) {
@@ -54,6 +57,9 @@ formEL.addEventListener("submit", function (e) {
     // generate a random number
     let carriageNumber = Math.floor((Math.random() * 10) + 1);
     let tripCodeNumber = Math.floor((Math.random() * 99999) + 1);
+
+    // cambiare la classe della colonna del forum per farla rimpicciolire
+    colEl.classList.replace("col-12", "col-5");
 
     const tripInfoEl = `
     <div class="card w-100" style="width: 18rem;">
