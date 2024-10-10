@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Train Ticket DOM</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,7 +12,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 
-<body style="background-color: #FFFBE9;">
+<body>
 
     <div class="container mt-5 py-3 border border-warning-subtle border-1 rounded-2" style="background-color: #E3CAA5;">
         <div class="row">
@@ -23,28 +23,30 @@
                     <!-- name -->
                     <div>
                         <label for="passengerName" class="form-label">Nome e cognome</label>
-                        <input type="text" class="form-control" id="passengerName" style="background-color: #FFFBE9;">
+                        <input type="text" class="form-control" id="passengerName" style="background-color: #FFFBE9;" required>
                     </div>
 
                     <!-- km -->
                     <div class="col-md-6">
                         <label for="number-of-km" class="form-label">km da percorrere</label>
-                        <input type="text" class="form-control" id="number-of-km" style="background-color: #FFFBE9;">
+                        <input type="text" class="form-control" id="number-of-km" style="background-color: #FFFBE9;" required>
                     </div>
 
                     <!-- age -->
                     <div class="col-md-6">
                         <label for="passenger-age" class="form-label">Età del passeggero</label>
-                        <input type="text" class="form-control" id="passenger-age" style="background-color: #FFFBE9;">
+                        <input type="text" class="form-control" id="passenger-age" style="background-color: #FFFBE9;" required>
                     </div>
+
+                    <!-- submit -->
                     <div class="col-12">
                         <button type="submit" id="submit" class="btn btn-secondary">Genera</button>
                     </div>
                 </form>
             </div>
 
-            <div class="col-7">
-            </div>
+            <!-- ticket -->
+            <div class="col-7"></div>
         </div>
     </div>
 
@@ -52,6 +54,7 @@
 
     <!-- my script -->
     <script src="./assets/js/main.js"></script>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
